@@ -1,0 +1,16 @@
+$('.deleteClick').click(function() {
+			    var r=confirm("Are you sure you want to delete the selected item?");
+			    if (r==false){
+			        alert("false");
+			        return;
+			    }else{
+			        alert("true");
+			    }
+			    var personSSNId = +$('#personSSNId').val();
+                var elem = document.getElementById("personSSNId");
+                 $.getJSON('${pageContext.request.contextPath}/api/delete/' + elem.value , function(ssn) {
+                            });
+
+
+                 				e.preventDefault(); // prevent actual form submit and page reload
+                 			});
