@@ -13,7 +13,7 @@ import org.springframework.cache.annotation.Cacheable;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.dao.DataIntegrityViolationException;
-import org.springframework.dao.DuplicateKeyException;
+//import org.springframework.dao.DuplicateKeyException;
 import org.springframework.stereotype.Controller;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.*;
@@ -94,9 +94,7 @@ public class PersonController {
         try{
         userManager.insertUser(user);
         }
-        catch (DuplicateKeyException e) {
-            return "Patient Already Exists: " + user.getFirstName() + " " + user.getLastName() + " " + user.getSocialSecurityNumber();
-        }
+        
         catch (DataIntegrityViolationException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
             return "Patient Already Exists: " + user.getFirstName() + " " + user.getLastName() + " " + user.getSocialSecurityNumber();

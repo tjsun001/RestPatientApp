@@ -24,28 +24,23 @@ public class UserDAOImpl implements UserDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 	
-	@Override
 	public void deleteUser(String socialSecurityNumber) throws Exception{
 		sessionFactory.getCurrentSession().delete(socialSecurityNumber, User.class);
 	}
     @CacheEvict(value="Users",allEntries=true)
-    @Override
-	public void deleteUser(User user) throws Exception{
+    public void deleteUser(User user) throws Exception{
 		sessionFactory.getCurrentSession().delete(user);
 	}
     @CacheEvict(value="Users",allEntries=true)
-    @Override
-	public void insertUser(User user) throws MySQLIntegrityConstraintViolationException {
+    public void insertUser(User user) throws MySQLIntegrityConstraintViolationException {
 		sessionFactory.getCurrentSession().save(user);
 	}
 
-	@Override
 	public User getUserById(int userId) {
 		return (User) sessionFactory.getCurrentSession().get(User.class, userId);
 	}
 	
-	@Override
-    @Cacheable(value="Users", key="#socialSecurityNumber")
+	@Cacheable(value="Users", key="#socialSecurityNumber")
     @Cache(usage = CacheConcurrencyStrategy.NONSTRICT_READ_WRITE)
 	public User getUser(String socialSecurityNumber) {
 		Query query = sessionFactory.getCurrentSession().createQuery("from User where socialSecurityNumber = :socialSecurityNumber").setCacheable(true);
@@ -57,7 +52,6 @@ public class UserDAOImpl implements UserDAO {
         }
 	}
 	
-	@Override
 	@SuppressWarnings("unchecked")
 	public List<User> getUsers() {
 		Criteria criteria = sessionFactory.getCurrentSession().createCriteria(User.class);

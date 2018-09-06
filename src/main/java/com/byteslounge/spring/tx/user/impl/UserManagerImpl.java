@@ -17,36 +17,30 @@ public class UserManagerImpl implements UserManager {
 	@Autowired
 	private UserDAO userDAO;
 	
-	@Override
 	@Transactional
 	public void insertUser(User user) throws MySQLIntegrityConstraintViolationException {
 		userDAO.insertUser(user);
 	}
 
-    @Override
-	@Transactional
+    @Transactional
 	public void deleteUser(String socialSecurityNumber)  throws Exception {
 		userDAO.deleteUser(socialSecurityNumber);
 	}
-@Override
-	@Transactional
+@Transactional
 	public void deleteUser(User user)  throws Exception {
 		userDAO.deleteUser(user);
 	}
 
-	@Override
 	@Transactional
 	public User getUserById(int userId) {
 		return userDAO.getUserById(userId);
 	}
 	
-	@Override
 	@Transactional
 	public User getUser(String ssn) {
 		return userDAO.getUser(ssn);
 	}
 
-	@Override
 	@Transactional
 	public List<User> getUsers() {
 		return userDAO.getUsers();
