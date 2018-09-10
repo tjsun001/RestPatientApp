@@ -33,9 +33,9 @@
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-annotations -->
 <dependency>
-    <groupId>org.hibernate</groupId>
-    <artifactId>hibernate-annotations</artifactId>
-    <version>3.5.6-Final</version>
+    <groupId>javax.persistence</groupId>
+    <artifactId>persistence-api</artifactId>
+    <version>1.0.2</version>
 </dependency>
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-dao -->

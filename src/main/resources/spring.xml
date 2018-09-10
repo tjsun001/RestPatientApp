@@ -28,18 +28,18 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
 
 
-       <!--property name="url" value="jdbc:mysql://localhost:3306/jwxxqpdm_test" />
+       <!--property name="url" value="jdbc:mysql://localhost:3306/Patient_schema" />
 
 
        <property name="url" value="${JDBC_CONNECTION_STRING}" />
-       <property name="username" value="jwxxqpdm_tjsun" />
-       <property name="password" value="J@n251957" />
+       <property name="username" value="tsanders" />
+       <property name="password" value="P@ssword" />
 
         -->
 
       <!--
      <property name="url" value="jdbc:mysql://localhost:3306/test" />
-     <property name="username" value="testuser" />
+     <property name="username" value="tsanders" />
      -->
      <property name="url" value="${JDBC_CONNECTION_STRING}" />
    <property name="username" value="${JDBC_USER_NAME}" />
