@@ -79,11 +79,12 @@
                 -->
                 <select selected="selected" id="countryOfBirth" name="countryOfBirth">
                                 <option>USA</option>
-                                  <option>Google Chrome</option>
-                                  <option>Firefox</option>
-                                  <option>Internet Explorer</option>
-                                  <option>Safari</option>
-                                  <option>Opera</option>
+                                  <option>Brazil</option>
+                                  <option>Canada</option>
+                                  <option>Malaysia</option>
+                                  <option>New Caledonia</option>
+                                  <option>Spain</option>
+                                  <option>Zambia</option>
                                 </select>
             <br/>
             <!--
@@ -98,7 +99,7 @@
 			<br/>
 
 
-			<input type="submit" class="addClick" value="Add New Patient Info" id="updatePatientSubmit"/>
+			<input type="submit" class="addClick" value="Add a New Patient" id="updatePatientSubmit"/>
 			<input type="button" value="Reset Input" onclick="formLoad()"/>
 
 			<input type="submit" class="deleteClick" value="Delete Patient Info" id="deletePatientSubmit/>
@@ -335,8 +336,8 @@
                 }else
                 if (action.value == 1){
                     var deleteUserObject = document.getElementById("newPersonForm");
-                    $.get('${pageContext.request.contextPath}/api/delete', $(deleteUserObject).serialize(),function(response1) {
-                             $('#newPatientFormResponseMsg').text(response1);
+                    $.get('${pageContext.request.contextPath}/api/delete', $(deleteUserObject).serialize(),function(response) {
+                             $('#newPatientFormResponseMsg').text(response);
                             }) ;
                         }
                    //e.preventDefault();
