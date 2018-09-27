@@ -3,23 +3,57 @@
   <groupId>RestPatientApp</groupId>
   <artifactId>RestPatientApp</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+  
   <dependencies>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-web</artifactId>
+    <version>4.3.19.RELEASE</version>
+</dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>4.3.19.RELEASE</version>
+</dependency>
+<dependency>
+        <groupId>org.springframework</groupId>
+        <artifactId>spring-core</artifactId>
+        <version>4.3.19.RELEASE</version>
+    </dependency>
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-webmvc</artifactId>
+    <version>4.3.19.RELEASE</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context-support -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context-support</artifactId>
+    <version>4.3.19.RELEASE</version>
+</dependency>
+
+
+
+  <!-- 
   <dependency>
  <groupId>org.springframework</groupId>
  <artifactId>spring-context</artifactId>  
- <version>4.3.3.RELEASE</version>    
+ <version>4.3.19.RELEASE</version>    
 </dependency>
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-tx</artifactId>
-    <version>2.5.4</version>
+    <version>4.3.3.RELEASE</version>
 </dependency>
-<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate -->
 <dependency>
     <groupId>org.hibernate</groupId>
     <artifactId>hibernate</artifactId>
     <version>3.2.6.ga</version>
 </dependency>
+-->
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-core -->
+
+<!-- https://mvnrepository.com/artifact/org.hibernate/hibernate -->
 <!-- https://mvnrepository.com/artifact/log4j/log4j -->
 <dependency>
     <groupId>log4j</groupId>
@@ -37,30 +71,59 @@
     <artifactId>persistence-api</artifactId>
     <version>1.0.2</version>
 </dependency>
+<!-- https://mvnrepository.com/artifact/org.ehcache/ehcache -->
+<dependency>
+    <groupId>org.ehcache</groupId>
+    <artifactId>ehcache</artifactId>
+    <version>3.4.0</version>
+</dependency>
+<dependency>
+    <groupId>org.hibernate</groupId>
+    <artifactId>hibernate-core</artifactId>
+    <version>4.3.5.Final</version>
+</dependency>
+<dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>4.3.5.Final</version>
+    </dependency>
+<dependency>
+  <groupId>org.hibernate</groupId>
+  <artifactId>hibernate-ehcache</artifactId>
+  <version>4.3.5.Final</version>
+</dependency>
+
+<dependency>
+    <groupId>commons-dbcp</groupId>
+    <artifactId>commons-dbcp</artifactId>
+    <version>1.2.2</version>
+</dependency>
+<dependency>
+   <groupId>org.springframework</groupId>
+   <artifactId>spring-orm</artifactId>
+   <version>4.1.6.RELEASE</version>
+</dependency>
+
+<dependency>
+    	<groupId>net.sf.ehcache</groupId>
+    	<artifactId>ehcache</artifactId>
+    	<version>2.7.4</version>
+    </dependency>
+  
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-dao -->
 <!--  
 <dependency>
     <groupId>org.springframework</groupId>
     <artifactId>spring-dao</artifactId>
-    <version>2.0.3</version>
+    <version>2.0.8</version>
 </dependency>
 -->
+
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-dao -->
 
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-web</artifactId>
-    <version>3.0.4.RELEASE</version>
-</dependency>
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-web -->
-<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-jdbc</artifactId>
-    <version>4.3.1.RELEASE</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/javax.ws.rs/javax.ws.rs-api -->
 <dependency>
     <groupId>javax.ws.rs</groupId>
@@ -68,29 +131,12 @@
     <version>2.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-jdbc</artifactId>
-    <version>4.3.1.RELEASE</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-webmvc -->
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-webmvc</artifactId>
-    <version>4.1.4.RELEASE</version>
-</dependency>
-<dependency>
-    <groupId>org.springframework</groupId>
-    <artifactId>spring-web</artifactId>
-    <version>4.1.6.RELEASE</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>8.0.12</version>
-</dependency>
+
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 <dependency>
     <groupId>mysql</groupId>
@@ -103,6 +149,29 @@
         <artifactId>jstl</artifactId>
         <version>1.2</version>
     </dependency> 
+    
+    <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-databind</artifactId>
+    <version>2.9.7</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-core</artifactId>
+    <version>2.9.7</version>
+</dependency>
+<dependency>
+    <groupId>com.fasterxml.jackson.core</groupId>
+    <artifactId>jackson-annotations</artifactId>
+    <version>2.9.7</version>
+</dependency>
+
+
 
 </dependencies>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
+
+  <packaging>pom</packaging>
 </project>
