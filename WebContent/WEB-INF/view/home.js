@@ -5,6 +5,6 @@ $('.deleteClick').click(function() {
                  $.getJSON('${pageContext.request.contextPath}/api/person/user/' + elem.value , function(user) {
                          alert("here");
                        }
-
+)
                  				e.preventDefault(); // prevent actual form submit and page reload
                  			});
