@@ -37,9 +37,32 @@
 		    <div id='SSNForm_SSN_errorloc' style="font-style: italic"></div>
 			<input type="submit" value="Get Patient Info By SSN" id="getBySSNIDButton"/>
 			<input type="text" name="SSN"  id="SSN" value="888-88-8888"  />
+			<!--  
 			<script type="text/javascript">
                         $("#SSN").mask("999-99-9999");
                         </script>
+             -->
+             <script type="text/javascript">
+                      
+                        $('#SSN').keyup(function() {
+                            var val = this.value.replace(/\D/g, '');
+                            var newVal = '';
+                            if(val.length > 4) {
+                               this.value = val;
+                            }
+                            if((val.length > 3) && (val.length < 6)) {
+                               newVal += val.substr(0, 3) + '-';
+                               val = val.substr(3);
+                            }
+                            if (val.length > 5) {
+                               newVal += val.substr(0, 3) + '-';
+                               newVal += val.substr(3, 2) + '-';
+                               val = val.substr(5);
+                             }
+                             newVal += val;
+                             this.value = newVal.substring(0, 11);
+                          });
+             </script>
 			 <div id="SSNFormResponseMsg"> </div>
 		</form>
 		<script  type="text/javascript">
@@ -70,7 +93,7 @@
                 <input type="text" name="socialSecurityNumber" id="socialSecurityNumber" />
             <br/>
             <script type="text/javascript">
-            $("#socialSecurityNumber").mask("999-99-9999");
+             $("#socialSecurityNumber").mask("999-99-9999");
             </script>
             <div id='newPersonForm_countryOfBirth_errorloc' style="font-style: italic"></div>
             <label for="nameInput">Country of Birth: </label>

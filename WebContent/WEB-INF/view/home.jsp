@@ -43,8 +43,13 @@
 		    <div id='SSNForm_SSN_errorloc' style="font-style: italic"></div>
 			<input type="submit" value="Get Patient Info By SSN" id="getBySSNIDButton"/>
 			<input type="text" name="SSN"  id="SSN" value="888-88-8888"  />
+            <!-- 
 			<script type="text/javascript">
-                       <!-- $("#SSN").mask("999-99-9999"); -->
+                        $("#SSN").mask("999-99-9999");
+            </script>
+                         -->
+			<script type="text/javascript">
+                      
                         $('#SSN').keyup(function() {
                             var val = this.value.replace(/\D/g, '');
                             var newVal = '';
