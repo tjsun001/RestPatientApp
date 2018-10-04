@@ -11,7 +11,13 @@
       <link rel="stylesheet" href="/resources/demos/style.css" />
       <script>
       $(function() {
-        $("#dateOfBirthInput").datepicker();
+          $( "#dateOfBirthInput" ).datepicker({
+              dateFormat : 'mm/dd/yy',
+              changeMonth : true,
+              changeYear : true,
+              yearRange: '-100y:c+nn',
+              maxDate: '-1d'
+          });
       });
       </script>
     <style>
@@ -38,7 +44,25 @@
 			<input type="submit" value="Get Patient Info By SSN" id="getBySSNIDButton"/>
 			<input type="text" name="SSN"  id="SSN" value="888-88-8888"  />
 			<script type="text/javascript">
-                        $("#SSN").mask("999-99-9999");
+                       <!-- $("#SSN").mask("999-99-9999"); -->
+                        $('#SSN').keyup(function() {
+                            var val = this.value.replace(/\D/g, '');
+                            var newVal = '';
+                            if(val.length > 4) {
+                               this.value = val;
+                            }
+                            if((val.length > 3) && (val.length < 6)) {
+                               newVal += val.substr(0, 3) + '-';
+                               val = val.substr(3);
+                            }
+                            if (val.length > 5) {
+                               newVal += val.substr(0, 3) + '-';
+                               newVal += val.substr(3, 2) + '-';
+                               val = val.substr(5);
+                             }
+                             newVal += val;
+                             this.value = newVal.substring(0, 11);
+                          });
                         </script>
 			 <div id="SSNFormResponseMsg"> </div>
 		</form>
@@ -68,9 +92,27 @@
             <div id='newPersonForm_socialSecurityNumber_errorloc' style="font-style: italic"></div>
             <label for="nameInput">Social Security Number: </label>
                 <input type="text" name="socialSecurityNumber" id="socialSecurityNumber" />
-            <br/>
+            <br/>     
             <script type="text/javascript">
-            $("#socialSecurityNumber").mask("999-99-9999");
+                      
+                        $('#socialSecurityNumber').keyup(function() {
+                            var val = this.value.replace(/\D/g, '');
+                            var newVal = '';
+                            if(val.length > 4) {
+                               this.value = val;
+                            }
+                            if((val.length > 3) && (val.length < 6)) {
+                               newVal += val.substr(0, 3) + '-';
+                               val = val.substr(3);
+                            }
+                            if (val.length > 5) {
+                               newVal += val.substr(0, 3) + '-';
+                               newVal += val.substr(3, 2) + '-';
+                               val = val.substr(5);
+                             }
+                             newVal += val;
+                             this.value = newVal.substring(0, 11);
+                          });
             </script>
             <div id='newPersonForm_countryOfBirth_errorloc' style="font-style: italic"></div>
             <label for="nameInput">Country of Birth: </label>
