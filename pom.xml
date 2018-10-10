@@ -2,6 +2,7 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>RestPatientApp</groupId>
   <artifactId>RestPatientApp</artifactId>
+  <name>RestPatientApp</name>
   <version>0.0.1-SNAPSHOT</version>
   
   <dependencies>
@@ -138,11 +139,7 @@
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 
 <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-<dependency>
-    <groupId>mysql</groupId>
-    <artifactId>mysql-connector-java</artifactId>
-    <version>5.1.6</version>
-</dependency>
+
 
 <dependency>
         <groupId>javax.servlet</groupId>
@@ -170,8 +167,16 @@
 
 
 
-</dependencies>
+  	<dependency>
+  		<groupId>mysql</groupId>
+  		<artifactId>mysql-connector-java</artifactId>
+  		<version>5.1.6</version>
+  	</dependency>
+  </dependencies>
 <!-- https://mvnrepository.com/artifact/org.springframework/spring-tx -->
 
-  <packaging>pom</packaging>
+  <packaging>war</packaging>
+   <build>
+    <finalName>RestPatientApp</finalName>
+  </build>
 </project>
