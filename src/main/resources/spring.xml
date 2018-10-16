@@ -26,38 +26,11 @@
 	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-
-
-       <!--property name="url" value="jdbc:mysql://localhost:3306/Patient_schema" />
-
-
-       <property name="url" value="${JDBC_CONNECTION_STRING}" />
-       <property name="username" value="tsanders" />
-       <property name="password" value="P@ssword" />
-
-        -->
-
     
      <property name="url" value="jdbc:mysql://localhost:3306/patienta_patientdb" />
-     <property name="username" value="tsanders" />
-     <property name="password" value="P@ssword" />
-     <!-- 
-     <property name="url" value="${JDBC_CONNECTION_STRING}" />
-   <property name="username" value="${JDBC_USER_NAME}" />
- 	-->
-
-
-
-        <!--
-        <property name="url" value="jdbc:mysql://aa10r4ukxk2j2fi.ceqsb27zik89.us-east-1.rds.amazonaws.com:3306/ebdb" />
-        <property name="username" value="tjsun001" />
-        <property name="password" value="JAN251957" />
-
-        -->
-        <!--
-          <property name="password" value="testpasswd" />
-          -->
-
+     <property name="username" value="patienta_testu" />
+     <property name="password" value="M@rch251957" />
+     
 	</bean>
 
     <bean id="sessionFactory" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
@@ -65,11 +38,6 @@
        <property name="hibernateProperties">
           <props>
              <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
-             <!--  
-             <prop key="hibernate.connection.driver_class">com.mysql.jdbc.Driver</prop>
-             <prop key="hibernate.connection.url">jdbc:mysql://localhost:3306/hibernatedemo</prop>
-             <prop key="hibernate.connection.password">password</prop>
-             -->
              <prop key="hbm2ddl.aut">create</prop>
              
              <prop key="hibernate.show_sql">true</prop>
